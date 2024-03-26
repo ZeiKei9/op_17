@@ -7,3 +7,12 @@ size_t strlen_(const char *begin) {
         end++;
     return end - begin;
 }
+
+char* find(char *begin, char *end, int ch) {
+    for (char *ptr = begin; ptr < end; ptr = ptr + sizeof(char)) {
+        if (*ptr == ch) {
+            return ptr;
+        }
+    }
+    return end;
+}
