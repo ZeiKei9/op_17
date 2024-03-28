@@ -405,8 +405,8 @@ void test() {
 int main() {
     //test();
 
-    char s2[20] = "   aZ    ";
-    char *res = findNonSpace(s2);
+    char s2[20] = "abcdnbxz";
+    char *res = findSpace(s2);
     printf("%c", *res);
 
     return 0;
