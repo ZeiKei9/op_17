@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdbool.h>
 
 size_t strlen_(const char *begin) {
     char *end = begin;
@@ -46,4 +47,24 @@ char* findSpace(char *begin) {
         ptr += sizeof(char);
     }
     return ptr;
+}
+
+char* findNonSpaceReverse(char *rbegin, const char *rend) {
+    char *ptr = rbegin;
+    bool found = false;
+
+    while (ptr != rend) {
+        int res = isspace(*ptr);
+
+        if (!res) {
+            found = true;
+        } else {
+            if (found) {
+                return ptr + sizeof(char);
+            }
+        }
+
+        ptr -= sizeof(char);
+    }
+    return rend;
 }
