@@ -405,8 +405,8 @@ void test() {
 int main() {
     //test();
 
-    char s2[20] = "test test ";
-    char *res = findNonSpaceReverse(s2 + sizeof(char) * 9, s2);
+    char s2[20] = "ABCDE";
+    char *res = findSpaceReverse(s2 + sizeof(char) * 5, s2);
     printf("%c", *res);
 
     return 0;
