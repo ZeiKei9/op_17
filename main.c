@@ -407,9 +407,8 @@ int main() {
 
     char src[] = "12345678910";
     char dst[20];
-    char *res = copy(src, src + sizeof(char) * 5, dst);
-    printf("%s", res);
-    printf("%s", dst);
+    char *res = copyIfReverse(src, src + sizeof(char) * 5, dst, &checkIfNotNum);
+    printf("%s\n", res);
 
     return 0;
 }
