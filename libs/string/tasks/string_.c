@@ -110,7 +110,7 @@ int checkIfNotNum(int i) {
 }
 
 char* copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int)) {
-    for (char *i = beginSource; i <= endSource - 1; i += sizeof(char)) {
+    for (char *i = beginSource; i < endSource; i += sizeof(char)) {
 
         if (f(*i)) {
             *beginDestination = *i;
@@ -123,7 +123,7 @@ char* copyIf(char *beginSource, const char *endSource, char *beginDestination, i
 }
 
 char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDestination, int (*f)(int)) {
-    for (char *i = rendSource; i >= rbeginSource + 1; i -= sizeof(char)) {
+    for (char *i = rbeginSource; i > rendSource; i -= sizeof(char)) {
 
         if (f(*i)) {
             *beginDestination = *i;
