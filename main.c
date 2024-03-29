@@ -405,9 +405,10 @@ void test() {
 int main() {
     //test();
 
-    char s2[20] = "ABCDE";
-    char *res = findSpaceReverse(s2 + sizeof(char) * 5, s2);
-    printf("%c", *res);
+    char s1[5] = "vcvb";
+    char s2[5] = "sdfs";
+    int res = strcmp_(s1, s2);
+    printf("%d", res);
 
     return 0;
 }

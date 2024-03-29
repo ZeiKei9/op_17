@@ -16,4 +16,7 @@ char* findNonSpaceReverse(char *rbegin, const char *rend);
 
 char* findSpaceReverse(char *rbegin, const char *rend);
 
+int strcmp_(const char *lhs, const char *rhs);
+
+
 #endif //LAB_STRING__H
