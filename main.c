@@ -405,10 +405,11 @@ void test() {
 int main() {
     //test();
 
-    char s1[5] = "vcvb";
-    char s2[5] = "sdfs";
-    int res = strcmp_(s1, s2);
-    printf("%d", res);
+    char src[] = "12345678910";
+    char dst[20];
+    char *res = copy(src, src + sizeof(char) * 5, dst);
+    printf("%s", res);
+    printf("%s", dst);
 
     return 0;
 }

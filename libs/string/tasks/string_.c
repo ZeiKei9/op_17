@@ -96,3 +96,13 @@ int strcmp_(const char *lhs, const char *rhs) {
         if (*lhs++ == 0) return (0);
     return (*(unsigned char *) lhs - *(unsigned char *) --rhs);
 }
+
+char* copy(const char *beginSource, const char *endSource, char *beginDestination) {
+    for (char *i = beginSource; i <= endSource; i += sizeof(char)) {
+        *beginDestination = *i;
+        beginDestination += sizeof(char);
+    }
+
+    *beginDestination = '\0';
+    return beginDestination;
+}
