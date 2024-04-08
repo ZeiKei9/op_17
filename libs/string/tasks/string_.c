@@ -134,3 +134,10 @@ char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDesti
     *beginDestination = '\0';
     return beginDestination;
 }
+//– возвращает указатель на первый пробельный символ справа, расположенный на ленте памяти,
+// начиная с rbegin и заканчивая rend. Если символ не найден,
+// возвращается адрес rend
+
+char* findSpaceReverse(char *rbegin, const char *rend){
+
+}

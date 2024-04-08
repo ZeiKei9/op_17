@@ -113,6 +113,47 @@ void test_empty_line(){
     }
 }
 
+
+
+
+
+
+
+
+//номер 5
+
+void tests_without_spaces(){
+    char input[] = "HelloWorld";
+    char *result = findSpaceReverse(input + strlen(input) - 1, input);
+    if (result == input){
+        printf("Passed\n");
+    }else{
+        printf("failed\n");
+    }
+
+}
+
+// Тестирование на пустой строке
+void tests_empty_line(){
+    char input[] = "";
+    char *result = findSpaceReverse(input + strlen(input) - 1, input);
+    if (result != input){
+        printf("Passed\n");
+
+    }else{
+        printf("Failed\n");
+    }
+
+}
+
+
+
+
+
+
+
+
+
 void test() {
     test_strlen_();
     test_find();
@@ -126,6 +167,13 @@ void test() {
     test_copyIfReverse();
     test_without_spaces();
     test_empty_line();
+    tests_without_spaces();
+
+
+    tests_empty_line();
+
+
+
 }
 
 int main() {
