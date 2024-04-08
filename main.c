@@ -231,6 +231,29 @@ void test_only_the_digits(){
 
 
 
+//номер 9
+void test_only_is_vowel_letters(){
+    char destination[10];
+    char source1[] = "hello";
+    char *endDestination1 = copyIfReverse(&source1[4], &source1[0], destination, isVowel);
+    *endDestination1 = '\0';
+    if (strcmp(destination, "oe") == 0) {
+        printf(" Passed\n");
+    } else {
+        printf(" Failed\n");
+    }
+}
+void test_only_is_odd_numbers(){
+    char destination[10];
+    char source2[] = "1234567";
+    char *endDestination2 = copyIfReverse(&source2[6], &source2[0], destination, isOddDigits);
+    *endDestination2 = '\0'; // Add null terminator
+    if (strcmp(destination, "7531") == 0) {
+        printf("Passed\n");
+    } else {
+        printf("Failed\n");
+    }
+}
 
 
 
@@ -254,7 +277,8 @@ void test() {
     test_with_no_empty__string();
     test_only_the_letters();
     test_only_the_digits();
-
+    test_only_is_vowel_letters();
+    test_only_is_odd_numbers();
 
 
 }
