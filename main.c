@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
+#include <string.h>
 #include "libs/data_structures/vector/vector.h"
 #include "libs/string/tasks/string_.h"
 
@@ -87,6 +88,31 @@ char* test_copyIfReverse() {
     assert(res[0] == 0 && res[1] == 1);
 }
 
+
+//4 номер
+//тест без пробелов
+void test_without_spaces(){
+    char input[] = "HelloWorld";
+    char *result = findNonSpaceReverse( input + strlen(input) - 1, input);
+    if (result != input){
+        printf("Passed\n");
+    }else{
+        printf("Failed\n");
+    }
+
+}
+
+//тестирование на пустой строке
+void test_empty_line(){
+    char input[] = "";
+    char *result = findNonSpaceReverse(input + strlen(input) - 1, input);
+    if (result == input){
+        printf("passed\n");
+    }else{
+        printf("failed\n");
+    }
+}
+
 void test() {
     test_strlen_();
     test_find();
@@ -98,6 +124,8 @@ void test() {
     test_copy();
     test_copyIf();
     test_copyIfReverse();
+    test_without_spaces();
+    test_empty_line();
 }
 
 int main() {
