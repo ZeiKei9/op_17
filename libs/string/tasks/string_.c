@@ -151,3 +151,17 @@ int strcmp(const char *lhs, const char *rhs) {
 char* copy(const char* beginSource, const char* endSource, char* beginDestination) {
 
 }
+
+
+char* copyIf(char *beginSource, const char *endSource, char *beginDestination, int (*f)(int)){
+
+}
+
+// Функция, которая определяет, является ли символ буквой
+int isLetter(int f){
+    return (f >= 'a' && f <= 'z') || (f >= 'A' && f <= 'Z');
+}
+
+int isDigit(int f){
+    return (f >= '0' && f <= '9');
+}
