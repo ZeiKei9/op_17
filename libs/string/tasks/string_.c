@@ -141,3 +141,7 @@ char* copyIfReverse(char *rbeginSource, const char *rendSource, char *beginDesti
 char* findSpaceReverse(char *rbegin, const char *rend){
 
 }
+
+int strcmp(const char *lhs, const char *rhs) {
+
+}

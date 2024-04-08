@@ -151,6 +151,40 @@ void tests_empty_line(){
 
 
 
+//номер 6
+//тест на разные строки
+void test_not_eqial_string(){
+    const char *str1 = "fhusgfus";
+    const char *str2 = "tfvcydnkj";
+
+    int result = strcmp(str1, str2);
+
+    if (result != 0){
+        printf("Failed");
+    }else{
+        printf("passed");
+    }
+
+}
+
+void test_are_eqial_string(){
+    const char *str1 = "hello";
+    const char *str2 = "hello";
+
+    int result = strcmp(str1, str2);
+
+    if (result == 0) {
+        printf("passed\n");
+    } else {
+        printf("failed\n");
+    }
+}
+
+
+
+
+
+
 
 
 
